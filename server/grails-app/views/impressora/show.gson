@@ -1,0 +1,7 @@
+import angular_grails.Impressora
+
+model {
+	Impressora impressora
+}
+
+json tmpl.impressora(impressora)

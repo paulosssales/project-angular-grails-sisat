@@ -1,0 +1,7 @@
+import angular_grails.Modelo
+
+model {
+	Modelo modelo
+}
+
+json g.render(modelo, [resolveTemplate: false])

@@ -1,0 +1,7 @@
+import angular_grails.Orgao
+
+model {
+	Orgao orgao
+}
+
+json g.render(orgao, [resolveTemplate: false])

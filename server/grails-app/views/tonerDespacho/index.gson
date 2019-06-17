@@ -1,0 +1,8 @@
+import angular_grails.TonerDespacho
+
+model {
+	Iterable<TonerDespacho> tonerDespachoList
+}
+
+json tmpl.tonerDespacho(tonerDespachoList ?: [])
+

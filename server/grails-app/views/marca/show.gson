@@ -1,0 +1,7 @@
+import angular_grails.Marca
+
+model {
+	Marca marca
+}
+
+json tmpl.marca(marca)

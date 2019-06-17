@@ -1,0 +1,8 @@
+import angular_grails.Solicitacao
+
+model {
+	Iterable<Solicitacao> solicitacaoList
+}
+
+json tmpl.solicitacao(solicitacaoList ?: [])
+

@@ -1,0 +1,7 @@
+import angular_grails.Solicitacao
+
+model {
+	Solicitacao solicitacao
+}
+
+json tmpl.solicitacao(solicitacao)

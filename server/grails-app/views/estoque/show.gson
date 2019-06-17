@@ -1,0 +1,7 @@
+import angular_grails.Estoque
+
+model {
+	Estoque estoque
+}
+
+json tmpl.estoque(estoque)

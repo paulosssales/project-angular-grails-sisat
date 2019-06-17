@@ -1,0 +1,7 @@
+import angular_grails.Administrador
+
+model {
+	Administrador administrador
+}
+
+json g.render(administrador, [resolveTemplate: false])

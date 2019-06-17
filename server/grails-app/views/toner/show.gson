@@ -1,0 +1,7 @@
+import angular_grails.Toner
+
+model {
+	Toner toner
+}
+
+json tmpl.toner(toner)

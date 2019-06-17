@@ -1,0 +1,8 @@
+import angular_grails.Administrador
+
+model {
+	Iterable<Administrador> administradorList
+}
+
+json tmpl.administrador(administradorList ?: [])
+

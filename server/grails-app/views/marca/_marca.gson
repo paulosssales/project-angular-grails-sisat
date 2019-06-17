@@ -1,0 +1,7 @@
+import angular_grails.Marca
+
+model {
+	Marca marca
+}
+
+json g.render(marca, [resolveTemplate: false])

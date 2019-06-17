@@ -1,0 +1,7 @@
+import angular_grails.TonerRecebido
+
+model {
+	TonerRecebido tonerRecebido
+}
+
+json g.render(tonerRecebido, [resolveTemplate: false])

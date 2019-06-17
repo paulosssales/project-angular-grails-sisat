@@ -1,0 +1,8 @@
+import angular_grails.Toner
+
+model {
+	Iterable<Toner> tonerList
+}
+
+json tmpl.toner(tonerList ?: [])
+

@@ -1,0 +1,7 @@
+import angular_grails.TonerDespacho
+
+model {
+	TonerDespacho tonerDespacho
+}
+
+json tmpl.tonerDespacho(tonerDespacho)

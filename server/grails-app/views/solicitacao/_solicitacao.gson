@@ -1,0 +1,7 @@
+import angular_grails.Solicitacao
+
+model {
+	Solicitacao solicitacao
+}
+
+json g.render(solicitacao, [resolveTemplate: false])

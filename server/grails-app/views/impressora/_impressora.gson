@@ -1,0 +1,7 @@
+import angular_grails.Impressora
+
+model {
+	Impressora impressora
+}
+
+json g.render(impressora, [resolveTemplate: false])

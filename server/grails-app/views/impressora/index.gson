@@ -1,0 +1,8 @@
+import angular_grails.Impressora
+
+model {
+	Iterable<Impressora> impressoraList
+}
+
+json tmpl.impressora(impressoraList ?: [])
+
