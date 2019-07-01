@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MarcaService } from './marca.service';
+import { ModeloService } from '../modelo/modelo.service';
+import { Router } from '@angular/router';
+import { Modelo } from '../modelo/modelo.component';
 
 @Component({
   selector: 'app-marca',
@@ -8,22 +11,61 @@ import { MarcaService } from './marca.service';
 })
 export class MarcaComponent implements OnInit {
 
-  marca: JSON;
+  marca: Marca;
+  tamanho = 0;
+  marcas = [];
+  marcasModelos: Modelo[];
+  modelos: any[];
 
-  marcas: Array<any>;
-
-  constructor(private marcaService: MarcaService) { }
+  constructor(private marcaService: MarcaService,
+              private modeloService: ModeloService,
+              private router: Router) { }
 
   ngOnInit() {
-    this.listar();
+    this.consultar();
   }
 
   listar() {
-    this.marcaService.listar().subscribe(dados => this.marcas = dados);
+    this.marcaService.consultar().then(dados => this.marcas = dados);
   }
 
-  salvar(){
+  consultar() {
+    this.marcaService.consultar()
+      .then(dados => {
+        this.marcas = dados;
+        // this.modelos = this.marcas.pop().modelos;
+        this.modeloService.consultar()
+        .then(resp => {
+          this.modelos = resp;
+          console.log(this.marcas);
+          console.log(this.modelos);
+        });
+        // const marca = JSON.stringify(this.marcas);
+        // this.tamanho = dados.length -1;
+        // console.log("obj Marca- " + marca);
+      });
+  }
+
+  buscarModelos() {
+    this.modeloService.consultar()
+      .then(dados => { this.modelos = dados;
+      });
+  }
+
+  salvar() {
     this.marcaService.salvar(this.marca);
   }
 
+  modeloDetaisl(marca: Marca) {
+    this.router.navigate(['/modelo', marca.modelos[0].id]);
+  }
 }
+
+export class Marca {
+  id: string;
+  nome: string;
+  impressoras: {'id': 'any'};
+  toners: {'id': 'any'};
+  modelos: Modelo;
+}
+

@@ -83,7 +83,7 @@ dataSource:
 environments:
     development:
         dataSource:
-            dbCreate: create-drop
+            dbCreate: update
             url: jdbc:mysql://127.0.0.1:3306/sisat2
     test:
         dataSource:

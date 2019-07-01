@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      <h4>Modelos</h4>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th colspan="1" scope="col">Id</th>
+            <th colspan="4" scope="col">Nome</th>
+            <th scope="col">Id. Marca</th>
+            <th scope="col">Id. Est.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let modelo of modelos">
+            <td colspan="1" #id>{{ modelo.id }}</td>
+            <td colspan="4" #nome>{{ modelo.nome }}</td>
+            <td #marcaid>
+              <button
+                class="btn btn-primary"
+                type="button"
+                (click)="marcaDetaisl(modelo)"
+              >
+                {{ modelo.marca.id }}
+              </button>
+            </td>
+            <td #estoqueid>
+              <button
+                (click)="estoqueDetaisl(modelo)"
+                Class="btn btn-primary" 
+                type="button"
+              >
+                {{ modelo.estoque.id }}
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -4,7 +4,8 @@ class Marca {
 
     String nome
 
-    static hasMany = [modelos: Modelo]
+    static hasMany = [modelos: Modelo, toners: Toner,
+                      impressoras: Impressora]
 
     static constraints = {
         nome nullable: false, unique: true

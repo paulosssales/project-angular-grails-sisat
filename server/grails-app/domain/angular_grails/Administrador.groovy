@@ -8,7 +8,7 @@ class Administrador {
 
     static constraints = {
         nome nullable: false, blank:false
-        usuario nullable: false, blank:false
+        usuario nullable: false, blank:false, unique: true
         senha size: 8..15
     }
 

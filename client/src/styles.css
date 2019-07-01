@@ -3,7 +3,14 @@
 /* You can add global styles to this file, and also import other style files */
 /* NAVIGATION MENU */
 
-.nav {
+*{
+    font-size: 10;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* .nav {
     zoom: 1;
 }
 
@@ -77,6 +84,7 @@
 }
 
 /* customizing bootstrap nav bar */
+/* 
 .navbar-dark, .navbar-static-top {
     background-color: #424649;
     border: 0px;
@@ -171,7 +179,7 @@ textarea {
     width: 250px;
     height: 150px;
     overflow: auto; /* IE always renders vertical scrollbar without this */
-    vertical-align: top;
+    /* vertical-align: top;
 }
 
 input[type=checkbox], input[type=radio] {
@@ -206,11 +214,11 @@ ul.one-to-many {
 
 ul.one-to-many li.add {
     list-style-type: none;
-}
+} */ 
 
 /* EMBEDDED PROPERTIES */
 
-fieldset.embedded {
+/* fieldset.embedded {
     background-color: transparent;
     border: 1px solid #CCCCCC;
     margin-left: 0;
@@ -227,7 +235,7 @@ fieldset.embedded legend {
 }
 
 /* MESSAGES AND ERRORS */
-
+/*
 .errors,
 .message {
     font-size: 0.8em;
@@ -268,10 +276,10 @@ fieldset.embedded legend {
 .message {
     background: transparent url(images/skin/information.png) 0.5em 50% no-repeat;
     text-indent: 2.2em;
-}
+} */
 
 /* form fields with errors */
-
+/*
 .error input, .error select, .error textarea {
     background: #fff3f3;
     border-color: #ffaaaa;
@@ -285,7 +293,7 @@ fieldset.embedded legend {
 }
 
 /* same effects for browsers that support HTML5 client-side validation (these have to be specified separately or IE will ignore the entire rule) */
-
+/*
 input:invalid, select:invalid, textarea:invalid {
     background: #fff3f3;
     border-color: #ffaaaa;
@@ -299,7 +307,7 @@ input:invalid:focus, select:invalid:focus, textarea:invalid:focus {
 }
 
 /* TABLES */
-
+/*
 table {
     border-top: 1px solid #DFDFDF;
     border-collapse: collapse;
@@ -382,7 +390,7 @@ th:hover, tr:hover {
 }
 
 /* PAGINATION */
-
+/*
 .pagination {
     border-top: 0;
     margin: 0.8em 1em 0.3em;
@@ -422,7 +430,7 @@ th:hover, tr:hover {
 }
 
 /* ACTION BUTTONS */
-
+/*
 .buttons {
     background-color: #efefef;
     overflow: hidden;
@@ -518,4 +526,4 @@ a.skip {
 
 .footer a {
     color: #feb672;
-}
+} */

@@ -4,19 +4,19 @@ class Estoque {
 
     Integer quantidade
     Integer quantidadeMinima
-    Toner toner 
+    Modelo modelo 
 
-    static belongsTo = [ Toner ]
+    static belongsTo = [ Modelo ]
 
     static constraints = {
         quantidade min: 0
         quantidadeMinima min: 0
-        toner nullable: false
+        modelo nullable: false
     }
 
     static mapping = {
         table name: "tab_estoques"
         id column: "estoque_id"
-        toner column: "id_toner"
+        modelo column: "id_modelo"
     }
 }

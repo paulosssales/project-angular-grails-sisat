@@ -12,11 +12,11 @@ class MarcaController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond marcaService.list(params), model:[marcaCount: marcaService.count()], formats: ['json']
+        respond marcaService.list(params), model:[marcaCount: marcaService.count()]
     }
 
     def show(Long id) {
-        respond marcaService.get(id), formats: ['json']
+        respond marcaService.get(id)
     }
 
     def save(Marca marca) {

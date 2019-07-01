@@ -1,12 +1,13 @@
 package angular_grails
 
-class Impressora extends Marca {
+class Impressora {
 
     String numeroSerial
     String setor
     String tombamento
 
     Orgao orgao
+    Marca marca
 
     static constraints = {
         numeroSerial nullable: false, blank:false

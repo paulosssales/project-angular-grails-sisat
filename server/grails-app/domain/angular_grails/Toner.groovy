@@ -1,10 +1,10 @@
 package angular_grails
 
-class Toner extends Marca {
+class Toner {
 
     String numeroSerial
     String lote
-    Estoque estoque
+    Marca marca
 
     static hasMany = [tonerSolicitados: TonerDespacho]
 
@@ -18,7 +18,6 @@ class Toner extends Marca {
         discriminator value: "TONER"
         table name: "tab_toners"
         id column: "toner_id"
-        estoque column: "id_estoque"
 
     }
 
